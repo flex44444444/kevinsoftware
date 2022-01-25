@@ -22,8 +22,8 @@ canvas {
 }
 
 body {
-  background-image: url(./bg.jpg);
-  background-size: cover;
+  background-image: url(./background.jpg);
+  background-size: fill;
   margin: 0;
   color: white;
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
@@ -64,6 +64,12 @@ body {
   padding: 0px 30px;
 }
 
+#QCBTN {
+  display: block;
+  transition: transform 0.3s;
+  transform: rotate(-90deg);
+}
+
 .QCMenu {
   background: #00000077;
   width: 25%;
@@ -71,22 +77,19 @@ body {
   z-index: 5;
   position: absolute;
   bottom: 9vh;
-  right: 0;
+  right: 1vh;
   transition: 300ms;
 }
 
 .QCMenu-open {
-  transform: translateX(100%);
+  transform: translateX(0);
 }
 
 .QCMenu-closed {
-  transform: translateX(calc(0 + -1vh));
+  transform: translateX(115%);
 }
 
 .right, .status {
   display: flex;
   justify-content: space-evenly;
-}
-
-.status {
 }
